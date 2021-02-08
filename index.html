@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.head{
+			width: 1200px;
+			height: 600px;
+			background-size: 100% 100%;
+			background-image: url(https://arte1.ru/images/detailed/2/14326.jpg);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.txt{
+			width: 170px;
+			height: 300px;
+			background-color: orange;
+
+		}
+		.wh{
+			width: 60px;
+			height: 60px;
+		}
+		.h1{
+			margin-left: 5px;
+		}
+		.h3g{
+			margin-left: 15px;
+		}
+		.h3p{
+			margin-left: 15px;
+		}
+		.h3t{
+			margin-left: 15px;
+		}
+		.h3b{
+			margin-left: 15px;
+		}
+		.guitar{
+			position: absolute;
+			top: 430px;
+			left: 530px;
+		}
+		.plane{
+			position: absolute;
+			top: 160px;
+			left: 350px;
+		}
+		.boot{
+			position: absolute;
+			top: 230px;
+			left: 1040px;
+		}
+		.totoro{
+			height: 80px;
+			position: absolute;
+			top: 300px;
+			left: 730px;
+		}
+	</style>
+
+	<div class="head">
+		<div class="txt">
+			<h1 class="h1">Найди:</h1>
+			<h2 class="h3g">гитару</h3>
+			<h2 class="h3p">самолет</h3>
+			<h2 class="h3t">тотторо</h3>
+			<h2 class="h3b">ботинок</h3>
+			<h1 class="h1">Очки: <span class="score"></span></h1>
+		</div>
+		<img class="wh guitar" src="https://clipart-db.ru/file_content/rastr/guitar_034.png">
+		<img class="wh plane" src="https://www.pngarts.com/files/4/Flying-Plane-PNG-Photo.png">
+		<img class="wh boot" src="https://kyrgyzexpo.ru/images/cat/sleese-warrior-safety-boots-singapore-smaller.png">
+		<img class="wh totoro" src="https://www.vippng.com/png/full/15-157376_immagine-correlata-mon-voisin-totoro-hayao-miyazaki-totoro.png">
+	</div>
+
+
+<script type="text/javascript">
+	//создай переменную score которая хранит 20
+	//выведи значение переменной score в тег span
+	let score = 0;
+	document.querySelector('.score').innerHTML = score;
+
+	document.querySelector('.guitar').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score;
+		alert('молодец');
+		document.querySelector('.h3g').style.textDecoration = 'line-through';
+		document.querySelector('.guitar').style.display = 'none';
+	}
+	document.querySelector('.totoro').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score;
+		alert('ура');
+		document.querySelector('.h3t').style.textDecoration = 'line-through';
+		document.querySelector('.totoro').style.display = 'none';
+	}
+	document.querySelector('.boot').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score;
+		alert('congrats!!1!!');
+		document.querySelector('.h3b').style.textDecoration = 'line-through';
+		document.querySelector('.boot').style.display = 'none';
+	}
+	document.querySelector('.plane').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score;
+		alert('yyyeessss');
+		document.querySelector('.h3p').style.textDecoration = 'line-through';
+		document.querySelector('.plane').style.display = 'none';
+	}
+</script>
+</body>
+</html>
